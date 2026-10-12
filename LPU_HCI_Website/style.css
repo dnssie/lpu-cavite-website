@@ -835,16 +835,6 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
   font-weight: 400;
 }
 
-.recognition-icon {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  color: var(--muted);
-  font-size: 18px;
-  line-height: 1;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
 .recognition-list li:hover .recognition-icon {
   color: var(--gold);
   transform: translate(2px, -2px);
