@@ -1624,10 +1624,9 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
 
 
 
-
 /* MOBILE HAMBURGER MENU */
 
-/* Desktop: keep the original navigation */
+/* Desktop: keep the original main navigation */
 .menu-toggle,
 .menu-icon,
 .sr-only {
@@ -1638,7 +1637,8 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
     display: flex;
 }
 
-/* Mobile only */
+
+/* Mobile only: hamburger navigation */
 @media (max-width: 650px) {
 
     /* Header layout */
@@ -1679,7 +1679,7 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         white-space: nowrap;
     }
 
-    /* White hamburger on the right */
+    /* Hamburger icon */
     .menu-icon {
         display: flex;
         flex-shrink: 0;
@@ -1775,6 +1775,7 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
 
 /* Fix mobile header alignment */
 @media (max-width: 650px) {
+
     .nav-wrap {
         display: flex;
         flex-direction: row;
@@ -1811,6 +1812,54 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
     }
 }
 
+
+/* DESKTOP ABOUT SUBNAV */
+@media (min-width: 651px) {
+
+    .about-subnav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: #ffffff;
+        border-bottom: 1px solid rgba(20, 35, 60, 0.10);
+    }
+
+    .about-subnav .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-menu-toggle,
+    .about-menu-label {
+        display: none;
+    }
+
+    .about-subnav-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .about-subnav-links a {
+        display: block;
+        padding: 10px 12px;
+        color: var(--navy);
+        font-size: 13px;
+        line-height: 1.4;
+        text-decoration: none;
+        border-radius: 7px;
+    }
+
+    .about-subnav-links a:hover {
+        background: rgba(20, 35, 60, 0.08);
+    }
+}
 
 
 /* MOBILE ABOUT FLOATING NAVIGATOR */
@@ -1850,21 +1899,18 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         bottom: 35px;
         transform: none;
         z-index: 1002;
-
         align-items: center;
         justify-content: center;
         width: 44px;
         height: 60px;
         padding: 0 8px;
         box-sizing: border-box;
-
         color: var(--navy);
         background: rgba(255, 255, 255, 0.35);
         border: 1px solid rgba(20, 35, 60, 0.10);
         border-right: 0;
         border-radius: 10px 0 0 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
         cursor: pointer;
@@ -1912,7 +1958,6 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         bottom: 35px;
         transform: none;
         z-index: 1001;
-
         flex-direction: column;
         align-items: stretch;
         gap: 3px;
@@ -1921,12 +1966,10 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         overflow-y: auto;
         padding: 10px;
         box-sizing: border-box;
-
         background: rgba(255, 255, 255, 0.90);
         border: 1px solid rgba(227, 231, 237, 0.35);
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(20, 35, 60, 0.08);
-
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
     }
