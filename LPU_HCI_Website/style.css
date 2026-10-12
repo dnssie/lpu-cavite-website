@@ -1812,8 +1812,10 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
 }
 
 
+
 /* MOBILE ABOUT FLOATING NAVIGATOR */
 @media (max-width: 650px) {
+
     .about-subnav {
         position: static;
         height: 0;
@@ -1918,6 +1920,7 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         max-height: 70vh;
         overflow-y: auto;
         padding: 10px;
+        box-sizing: border-box;
 
         background: rgba(255, 255, 255, 0.90);
         border: 1px solid rgba(227, 231, 237, 0.35);
@@ -1942,7 +1945,7 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         background: rgba(20, 35, 60, 0.08);
     }
 
-    /* Open menu */
+    /* Open menu when tapped */
     .about-menu-toggle:checked ~ .about-subnav-links {
         display: flex;
     }
