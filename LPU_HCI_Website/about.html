@@ -7,21 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="about-page">
-    <header class="site-header">
-        <div class="container nav-wrap">
-          <a class="logo" href="index.html">
-            <span>Lyceum of the Philippines University <small>Cavite</small></span>
-          </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="announcements.html">Announcements</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-            <a class="active" href="about.html">About</a>
-        </nav>
-        </div>
-    </header>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="logo" href="index.html">
+      <span>Lyceum of the Philippines University <small>Cavite</small></span>
+    </a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <label for="menu-toggle" class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Toggle navigation</span>
+    </label>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a class="active" href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
 
     <main>
 
@@ -40,19 +50,29 @@
     <!-- in-page navigation -->
     <nav class="about-subnav" aria-label="On this page">
       <div class="container">
-        <a href="#legacy">Legacy</a>
-        <a href="#profile">Profile</a>
-        <a href="#recognition">Recognition</a>
-        <a href="#history">History</a>
-        <a href="#values">Core Values</a>
-        <a href="#vision-mission">Vision &amp; Mission</a>
-        <a href="#philosophy">Philosophy &amp; Policy</a>
-        <a href="#objectives">Objectives</a>
-        <a href="#president">President's Message</a>
-        <a href="#officials">University Officials</a>
-        <a href="#why-lpu">Why LPU</a>
+        <input type="checkbox" id="about-menu-toggle" class="about-menu-toggle">
+
+        <label for="about-menu-toggle" class="about-menu-label">
+          <span>Explore About</span>
+          <span class="about-menu-arrow">⌄</span>
+        </label>
+
+        <div class="about-subnav-links">
+          <a href="#legacy">Legacy</a>
+          <a href="#profile">Profile</a>
+          <a href="#recognition">Recognition</a>
+          <a href="#history">History</a>
+          <a href="#values">Core Values</a>
+          <a href="#vision-mission">Vision &amp; Mission</a>
+          <a href="#philosophy">Philosophy &amp; Policy</a>
+          <a href="#objectives">Objectives</a>
+          <a href="#president">President's Message</a>
+          <a href="#officials">University Officials</a>
+          <a href="#why-lpu">Why LPU</a>
+        </div>
       </div>
     </nav>
+
 
     <!-- legacy -->
     <section class="section" id="legacy">
