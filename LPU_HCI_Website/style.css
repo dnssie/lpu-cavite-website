@@ -643,6 +643,17 @@ nav a:hover,nav a.active{
     border-bottom-color:var(--gold)
 }
 
+
+/* Desktop: preserve original navigation */
+.about-menu-toggle,
+.about-menu-label {
+    display: none;
+}
+
+.about-subnav-links {
+    display: contents;
+}
+
 /* active section */
 body:has(#legacy:target) .about-subnav a[href="#legacy"],
 body:has(#profile:target) .about-subnav a[href="#profile"],
@@ -1812,6 +1823,7 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
 }
 
 
+
 /* MOBILE ABOUT FLOATING NAVIGATOR */
 @media (max-width: 650px) {
 
@@ -1866,7 +1878,6 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         cursor: pointer;
     }
 
-    /* Hide label text visually */
     .about-menu-label > span:first-child {
         position: absolute;
         width: 1px;
@@ -1878,7 +1889,6 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         white-space: nowrap;
     }
 
-    /* Arrow icon */
     .about-menu-arrow {
         display: flex;
         align-items: center;
@@ -1899,7 +1909,7 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         transform: rotate(45deg);
     }
 
-    /* Section links panel */
+    /* Floating links panel */
     .about-subnav-links {
         display: none;
         position: fixed;
@@ -1924,18 +1934,24 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         -webkit-backdrop-filter: none;
     }
 
-    .about-subnav-links a {
+    /* Override original desktop link spacing on mobile only */
+    .about-subnav .about-subnav-links a {
         display: block;
         padding: 11px 12px;
         color: var(--navy);
-        border-radius: 7px;
         font-size: 13px;
+        font-weight: 400;
         line-height: 1.4;
+        border: 0;
+        border-radius: 7px;
         text-decoration: none;
+        white-space: normal;
     }
 
-    .about-subnav-links a:hover {
+    .about-subnav .about-subnav-links a:hover {
         background: rgba(20, 35, 60, 0.08);
+        color: var(--navy);
+        border: 0;
     }
 
     /* Open menu when tapped */
@@ -1943,7 +1959,7 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
         display: flex;
     }
 
-    /* Point arrow left while open */
+    /* Rotate arrow when open */
     .about-menu-toggle:checked + .about-menu-label
     .about-menu-arrow::before {
         transform: rotate(225deg);
