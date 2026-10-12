@@ -1623,7 +1623,6 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
 }
 
 
-
 /* MOBILE HAMBURGER MENU */
 
 /* Desktop: keep the original main navigation */
@@ -1809,55 +1808,6 @@ body:has(#why-lpu:target) .about-subnav a[href="#why-lpu"] {
 
     .nav-wrap > .site-nav {
         flex: 0 0 100%;
-    }
-}
-
-
-/* DESKTOP ABOUT SUBNAV */
-@media (min-width: 651px) {
-
-    .about-subnav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background: #ffffff;
-        border-bottom: 1px solid rgba(20, 35, 60, 0.10);
-    }
-
-    .about-subnav .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .about-menu-toggle,
-    .about-menu-label {
-        display: none;
-    }
-
-    .about-subnav-links {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 6px;
-        width: 100%;
-        padding: 12px 0;
-    }
-
-    .about-subnav-links a {
-        display: block;
-        padding: 10px 12px;
-        color: var(--navy);
-        font-size: 13px;
-        line-height: 1.4;
-        text-decoration: none;
-        border-radius: 7px;
-    }
-
-    .about-subnav-links a:hover {
-        background: rgba(20, 35, 60, 0.08);
     }
 }
 
